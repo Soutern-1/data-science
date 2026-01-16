@@ -1,0 +1,28 @@
+import pandas as pd
+
+df = pd.read_csv("class3-pandas/titanic.csv")
+
+
+# loc 
+# label-based
+# printing all rows of a specific column
+
+print(df.loc[:,"Name"])
+# 10 rows all columns
+print(df.loc[:9,:])
+print(df.loc[:9])
+
+# printing specific row
+# NOT index, prints n-1
+print(df.loc[10])
+
+# ----------------------------
+# iloc
+# index based 
+print(df.iloc[30:41,6:9])
+print(df.iloc[10])
+
+# ----------------------------
+
+print(df.loc[:5,["Name","Sex","Age"]])
+
