@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("class5_matplotlib/titanic.csv")
+
+
+counts = df["Pclass"].value_counts()
+classes = ["1","2","3"]
+print(counts)
+
+plt.bar(classes,counts)
+plt.xlabel("Class number")
+plt.ylabel("Number of passengers")
+plt.title("Number of passengers per class on the Titanic")
+plt.show()
